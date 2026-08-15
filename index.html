@@ -40,12 +40,12 @@
 </head>
 <body>
   <button id="runBtn">Run Code</button>
-  <iframe id="frame" sandbox="allow-scripts allow-modals"></iframe>
+  <iframe id="frame" sandbox="allow-scripts allow-modals allow-same-origin allow-forms allow-popups"></iframe>
 
   <script>
     document.getElementById('runBtn').onclick = function () {
       const code = prompt('Type or paste your HTML / JS code here:');
-      if (code === null) return;          // user cancelled
+      if (code === null) return;
       if (!code.trim()) {
         alert('No code entered.');
         return;
