@@ -47,7 +47,7 @@
     const frame = document.getElementById('frame');
     const STORAGE_KEY = 'uranium-last-code';
 
-    // Load last code on page load (autosave)
+    // autosave
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       frame.srcdoc = saved;
@@ -61,10 +61,10 @@
         return;
       }
 
-      // Save it
+      // save it
       localStorage.setItem(STORAGE_KEY, code);
 
-      // Run it (no sandbox = can run everything, including clipboard)
+      // run it
       frame.srcdoc = code;
     };
   </script>
